@@ -35,6 +35,7 @@
     <ClInclude Include="..\include\fakeit\FakeitContext.hpp" />
     <ClInclude Include="..\include\fakeit\FakeitEvents.hpp" />
     <ClInclude Include="..\include\fakeit\FakeitExceptions.hpp" />
+    <ClInclude Include="..\include\fakeit\FakeitUncaughtExceptions.hpp" />
     <ClInclude Include="..\include\fakeit\fakeit_root.hpp" />
     <ClInclude Include="..\include\fakeit\Functional.hpp" />
     <ClInclude Include="..\include\fakeit\Invocation.hpp" />
