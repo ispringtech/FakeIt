@@ -5,6 +5,7 @@
 #include "fakeit/FakeitContext.hpp"
 #include "fakeit/SortInvocations.hpp"
 #include "fakeit/MatchAnalysis.hpp"
+#include "fakeit/FakeitUncaughtExceptions.hpp"
 
 namespace fakeit {
 
@@ -13,7 +14,7 @@ namespace fakeit {
         friend class SequenceVerificationProgress;
 
         ~SequenceVerificationExpectation() THROWS {
-            if (std::uncaught_exception()) {
+            if (uncaught_exceptions()) {
                 return;
             }
             VerifyExpectation(_fakeit);

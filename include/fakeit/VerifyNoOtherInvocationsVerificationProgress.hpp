@@ -10,6 +10,7 @@
 
 #include "fakeit/FakeitContext.hpp"
 #include "fakeit/ThrowFalseEventHandler.hpp"
+#include "fakeit/FakeitUncaughtExceptions.hpp"
 
 namespace fakeit {
 
@@ -22,7 +23,7 @@ namespace fakeit {
             friend class VerifyNoOtherInvocationsVerificationProgress;
 
             ~VerifyNoOtherInvocationsExpectation() THROWS {
-                if (std::uncaught_exception()) {
+                if (uncaught_exceptions()) {
                     return;
                 }
 
